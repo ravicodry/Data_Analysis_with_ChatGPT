@@ -8,7 +8,7 @@ import matplotlib
 import pandas as pd
 
 def main():
-    matplotlib.use("TkAgg")
+    matplotlib.use('TkAgg')
     load_dotenv()
 
     st.set_page_config(page_title="CSV App", page_icon=":chart:", layout="centered")
