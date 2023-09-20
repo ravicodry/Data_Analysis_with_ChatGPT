@@ -53,6 +53,7 @@ pandasai==1.2.5
 parso==0.8.3
 pickleshare==0.7.5
 Pillow==9.5.0
+plotly==5.17.0
 prompt-toolkit==3.0.39
 protobuf==4.24.3
 pure-eval==0.2.2
