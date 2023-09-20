@@ -6,6 +6,7 @@ from pandasai.llm.openai import OpenAI
 from dotenv import load_dotenv
 import matplotlib
 import pandas as pd
+import tkinter as tk
 
 def main():
     matplotlib.use('TkAgg')
