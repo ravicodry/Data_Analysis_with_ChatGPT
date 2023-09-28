@@ -2,6 +2,7 @@ import streamlit as st
 from langchain.agents import create_csv_agent
 from langchain.llms import OpenAI
 from pandasai import PandasAI
+from pandasai import SmartDataframe
 from pandasai.llm.openai import OpenAI
 from dotenv import load_dotenv
 import matplotlib
@@ -17,15 +18,18 @@ def main():
     
     if file is not None:
         df=pd.read_csv(file)
+        
         st.write(df.head())
         user_question=st.text_input("What is your question?")
         llm=OpenAI(temperature=0)
         pandas_ai=PandasAI(llm)
+        sdf = SmartDataframe(df, config={"llm": llm})
         #agent=create_csv_agent(llm,file,verbose=True)
 
         if user_question is not None and user_question != "":
             #st.write(agent.run(user_question))
-            st.write(pandas_ai.run(df,user_question,show_code=True))
+            #st.write(pandas_ai.run(df,user_question,show_code=True))
+            st.write(sdf.chat(user_question))
         
 
 
