@@ -6,10 +6,6 @@ from pandasai.llm.openai import OpenAI
 from dotenv import load_dotenv
 import matplotlib
 import pandas as pd
-<<<<<<< HEAD
-=======
-
->>>>>>> df8a3d2f309ede61afe66e591f18c08e4346ab83
 def main():
     matplotlib.use('TkAgg')
     load_dotenv()
