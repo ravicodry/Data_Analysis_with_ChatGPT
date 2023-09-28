@@ -23,7 +23,7 @@ def main():
         user_question=st.text_input("What is your question?")
         llm=OpenAI(temperature=0)
         pandas_ai=PandasAI(llm)
-        sdf = SmartDataframe(df, config={"llm": llm})
+        sdf = SmartDataframe(df, config={"llm": llm,"conversational": False})
         #agent=create_csv_agent(llm,file,verbose=True)
 
         if user_question is not None and user_question != "":
